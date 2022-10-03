@@ -16,8 +16,7 @@ export const style = {
       textDecoration: 'none',
       color: 'black'
     },
-    icons:{
-      fontSize: 25,
-      margin: 10
+    icon:{
+      margin: 20
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CartWidget from '../CartWidget/CartWidget'
 import { style } from './NavBar.style'
 
 const NavBar = () => {
@@ -8,11 +8,14 @@ const NavBar = () => {
       <h1 style={style.title}>Lions</h1>
       <nav>
         <a style={style.navbar} href="/shop">Productos</a>
-        <a style={style.navbar} href="/Nosotros">Nosotros</a>
+        <a style={style.navbar} href="/categorias">Categorias</a>
+        <a style={style.navbar} href="/nosotros">Nosotros</a>
       </nav>
-      <div>
-        <ShoppingCartIcon style={style.icons}/>
+      <div style={style.icon}>
+       <CartWidget/>
       </div>
+      
+      
     </header>
   )
 }

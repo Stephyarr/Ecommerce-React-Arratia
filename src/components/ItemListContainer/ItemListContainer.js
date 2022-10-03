@@ -1,8 +1,11 @@
 import React from 'react'
+import { style } from './ItemListContainer.style'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
   return (
-    <div>ItemListContainer</div>
+    <>
+      <h2 style={style.estilo}> Bienvenidos! {greeting} </h2>
+    </>
   )
 }
 
