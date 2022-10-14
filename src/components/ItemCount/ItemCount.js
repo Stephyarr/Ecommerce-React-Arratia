@@ -1,8 +1,22 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { style } from './ItemCount.Style'
 
-export const ItemCount = ({stock}) => {
+export const ItemCount = ({stock, onAdd}) => {
   // declaramos estado-state
   const [contador, setContador] = useState(1);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      console.log("luego de 2seg");
+    },2000)
+
+    // setInterval(()=>{
+    //   console.log("ping");
+    // },2000)
+    //setInterval 
+
+  },[]);
+
   // eventos Add, Substract
   const handlerClickAdd = () => {
     if (contador < stock) {
@@ -23,18 +37,18 @@ export const ItemCount = ({stock}) => {
   }
 
   return (
-    <div>
+    <div style={style.cards}>
       <h3>Nombre Producto</h3>
       <p>Stock: {stock}</p>
       <h3>Cantidad: {contador}</h3>
-      <div>
+      <div style={style.buttons}>
         {/* evento handlerClick */}
-        <button onClick={handlerClickAdd}>sumar</button> 
-        <button onClick={handlerSubstract}>restar</button>
-        <button onClick={reset}>Reset</button>
-        <div>
-          <button>Agregar al carrito</button>
-        </div>
+        <button style={style.btn} onClick={handlerClickAdd}> + </button> 
+        <button style={style.btn} onClick={handlerSubstract}> - </button>
+        <button style={style.btn} onClick={reset}>Reset</button>
+      </div>
+      <div>
+        <button onClick={()=> onAdd(contador)}>Agregar al carrito</button>
       </div>
       
     </div>
