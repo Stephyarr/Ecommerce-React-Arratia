@@ -6,9 +6,9 @@ export const ItemCount = ({stock, onAdd}) => {
   const [contador, setContador] = useState(1);
 
   useEffect(()=>{
-    setTimeout(()=>{
-      console.log("luego de 2seg");
-    },2000)
+    // setTimeout(()=>{
+    //   console.log("luego de 2seg");
+    // },2000)
 
     // setInterval(()=>{
     //   console.log("ping");

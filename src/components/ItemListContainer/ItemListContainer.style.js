@@ -1,5 +1,12 @@
 export const style = {
-    estilo:{
-        textAlign: 'center',
+    subtitulo:{
+        textAlign: 'center'
+    },
+    lista:{
+        
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 0.5fr)',
+        margin: 50
+       
     }
 }
