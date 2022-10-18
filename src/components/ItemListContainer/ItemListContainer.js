@@ -3,6 +3,7 @@ import { style } from './ItemListContainer.style'
 // import { ItemCount } from '../ItemCount/ItemCount'
 import { ProductData } from '../../data/ProductData'
 import ItemList from './ItemList/ItemList'
+import { BrowserRouter} from 'react-router-dom'
 
 
 // PROMESA
@@ -45,31 +46,33 @@ const ItemListContainer = ({greeting}) => {
 
   return (
     <>
-      <h2 style={style.subtitulo}>Los Productos Mas Vistos</h2>
-      {/* <h2 style={style.estilo}> Bienvenidos! {greeting} </h2>
-      <ItemCount stock={10} onAdd={onAdd}/> */}
-      {/* ItemCount a modo de prueba en ItemListContainer luego lo movemos */}
+      
+        <h2 style={style.subtitulo}>Los Productos Mas Vistos</h2>
+        {/* <h2 style={style.estilo}> Bienvenidos! {greeting} </h2>
+        <ItemCount stock={10} onAdd={onAdd}/> */}
+        {/* ItemCount a modo de prueba en ItemListContainer luego lo movemos */}
 
-      {/* {producto.map((productos)=>
-        
-          <h2 key={productos.id}>{productos.name}</h2>
-        )
-      } */}
-      <div style={style.lista}>
-
-        {producto.map((productos)=>{
-          return (
-            <ItemList
-              key={productos.id} 
-              name={productos.name} 
-              img={productos.img}
-              precio={productos.precio}
-            />
+        {/* {producto.map((productos)=>
+          
+            <h2 key={productos.id}>{productos.name}</h2>
           )
-        })}
+        } */}
+        <div style={style.lista}>
 
+          {producto.map((productos)=>{
+            return (
+              <ItemList
+                key={productos.id} 
+                name={productos.name} 
+                img={productos.img}
+                precio={productos.precio}
+              />
+            )
+          })}
+        </div>
 
-      </div>
+      
+      
     </>
   )
 }

@@ -5,10 +5,10 @@ const ItemList = (props) => {
   return (
     <div style={style.list}>
       <div >
-        <img style={style.imagen} src={props.img}/>
+        <img style={style.imagen} alt={props.name} src={props.img}/>
         <div>
           <h3>{props.name}</h3>
-          <p>{props.precio}</p>
+          <p>${props.precio}</p>
         </div>
       </div>
       

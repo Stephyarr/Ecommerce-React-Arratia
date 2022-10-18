@@ -6,6 +6,7 @@ export const ProductData = [
         img: "./assets/imag/arnes-perro64.png",
         categoria: "accesorios",
         stock: 5,
+        
     },
     {
         id:2,
@@ -14,6 +15,7 @@ export const ProductData = [
         img: "./assets/imag/buzo-combina-1.png",
         categoria: "buzo humano",
         stock: 5,
+        
     },
     {
         id:3,
@@ -22,6 +24,7 @@ export const ProductData = [
         img: "./assets/imag/buzo-combinacion.png",
         categoria: "buzo humano",
         stock: 5,
+        
     },
     {
         id:4,
@@ -30,6 +33,7 @@ export const ProductData = [
         img: "./assets/imag/buzo-gris-combinacion.png",
         categoria: "buzo humano",
         stock: 5,
+        
     },
     {
         id:5,
@@ -38,6 +42,7 @@ export const ProductData = [
         img: "./assets/imag/buzo-perro-cuero.png",
         categoria: "buzo perro",
         stock: 5,
+        
     },
     {
         id:6,
@@ -46,6 +51,7 @@ export const ProductData = [
         img: "./assets/imag/buzocan1.jpg",
         categoria: "buzo perro",
         stock: 5,
+        
     },
     {
         id:7,
@@ -54,6 +60,7 @@ export const ProductData = [
         img: "./assets/imag/buzocan3.png",
         categoria: "buzo perro",
         stock: 5,
+        
     },
     {
         id:8,
@@ -62,6 +69,7 @@ export const ProductData = [
         img: "./assets/imag/buzocan4.jpg",
         categoria: "buzo perro",
         stock: 5,
+        
     },
 
     {
@@ -71,6 +79,7 @@ export const ProductData = [
         img: "./assets/imag/buzzo-multi-dog.png",
         categoria: "buzo perro",
         stock: 5,
+        
     },
     {
         id:10,
@@ -79,6 +88,7 @@ export const ProductData = [
         img: "./assets/imag/combinacio-perro-hum-2.png",
         categoria: "buzo humano",
         stock: 5,
+        
     },
     {
         id:11,
@@ -87,6 +97,7 @@ export const ProductData = [
         img: "./assets/imag/combinacio-perro-hum.png",
         categoria: "buzo humano",
         stock: 5,
+        
     },
     {
         id:12,
@@ -95,6 +106,7 @@ export const ProductData = [
         img: "./assets/imag/pretal_arnes.png",
         categoria: "accesorios",
         stock: 5,
+        
     },
     {
         id:13,
@@ -103,6 +115,7 @@ export const ProductData = [
         img: "./assets/imag/pretal_perro.png",
         categoria: "accesorios",
         stock: 5,
+        
     },
     {
         id:14,
@@ -111,6 +124,7 @@ export const ProductData = [
         img: "./assets/imag/pretal-negro.perro.png",
         categoria: "accesorios",
         stock: 5,
+        
     },
     {
         id:15,
@@ -119,6 +133,7 @@ export const ProductData = [
         img: "./assets/imag/pretal-verdemilitar.png",
         categoria: "accesorios",
         stock: 5,
+        
     },
     {
         id:16,
@@ -127,6 +142,7 @@ export const ProductData = [
         img: "./assets/imag/pretal-viole.png",
         categoria: "accesorios",
         stock: 5,
+        
     },
     {
         id:17,
@@ -135,6 +151,7 @@ export const ProductData = [
         img: "./assets/imag/buzo-com-3.png",
         categoria: "buzo humano",
         stock: 5,
+        
     },
 ]
 
