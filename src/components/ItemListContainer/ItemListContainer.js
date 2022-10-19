@@ -3,7 +3,7 @@ import { style } from './ItemListContainer.style'
 // import { ItemCount } from '../ItemCount/ItemCount'
 import { ProductData } from '../../data/ProductData'
 import ItemList from './ItemList/ItemList'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 
 
@@ -22,7 +22,7 @@ const ItemListContainer = ({greeting}) => {
 
   const [producto, setProducto] = useState([]);
 
-  const id  = useParams();
+  // const id  = useParams();
   // console.log(id);
   
  
@@ -32,10 +32,12 @@ const ItemListContainer = ({greeting}) => {
       try {
         const datosFecth = await getProductos();
 
-        const filtrado = datosFecth.filter((setProducto)=>{
-          return setProducto.categoria === id
-        })
-        console.log(filtrado);
+        // const filtrar = datosFecth.filter((setProducto)=> setProducto.categoria === id)
+
+        // const filtrado = datosFecth.filter((setProducto)=>{
+        //   return setProducto.categoria === id
+        // })
+        // console.log(filtrado);
         // console.log(datosFecth);
         setProducto(datosFecth);
        
