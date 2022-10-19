@@ -1,14 +1,17 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import { style } from './NavBar.style'
-// import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 // import { ProductData } from '../../data/ProductData'
 
 
 const NavBar = () => {
   return (
     <header style={style.container}>
-      <h1 style={style.title}>Lions</h1>
+      <Link to="/">
+        <h1 style={style.title}>Lions</h1>
+      </Link>
+      
       <nav>
         {/* {
           ProductData.map((categoria, i)=>{ 
@@ -18,13 +21,13 @@ const NavBar = () => {
            
           })
         } */}
-        <a style={style.navbar} href="/categoria">Accesorio</a>
-        <a style={style.navbar} href="/categoria">Buzo Conjunto</a>
-        <a style={style.navbar} href="/categoria">Buzo Mascota</a>
+        <NavLink style={style.navbar} to="/categoria/accesorio">Accesorio</NavLink>
+        <NavLink style={style.navbar} to="/categoria/Buzo Conjunto">Buzo Conjunto</NavLink>
+        <NavLink style={style.navbar} to="/categoria/Buzo Mascota">Buzo Mascota</NavLink>
       </nav>
-      <div style={style.icon}>
+      <Link to="/cart" style={style.icon}>
        <CartWidget/>
-      </div>
+      </Link>
       
       
     </header>
