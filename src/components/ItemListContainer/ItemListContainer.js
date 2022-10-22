@@ -6,86 +6,43 @@ import ItemList from './ItemList/ItemList'
 // import { useParams } from 'react-router-dom'
 
 
-
-
-// PROMESA
-const getProductos = ()=>{
-  return new Promise((resolve) =>{
-    setTimeout(()=>{
-      resolve(ProductData);
-    }, 2000);
-  });
-}
-// console.log(getProductos());
-
 const ItemListContainer = ({greeting}) => {
 
-  const [producto, setProducto] = useState([]);
+  const [productos, setProductos] = useState([]);
 
-  // const id  = useParams();
+  // const {id} =useParams();
   // console.log(id);
-  
- 
+
   useEffect(() => {
+    // Promesa
+    const getProductos = () => {
+      return new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+          resolve(ProductData);
+          // console.log(ProductData);
+        }, 2000)
+      })
+    }
+    // getProductos()
+    //   .then((datos)=> setProductos(datos));
 
-    async function fecthData () {
+    async function fetchProducts () {
       try {
-        const datosFecth = await getProductos();
-
-        // const filtrar = datosFecth.filter((setProducto)=> setProducto.categoria === id)
-
-        // const filtrado = datosFecth.filter((setProducto)=>{
-        //   return setProducto.categoria === id
-        // })
-        // console.log(filtrado);
-        // console.log(datosFecth);
-        setProducto(datosFecth);
-       
+        const datosFetch = await getProductos();
+        setProductos(datosFetch);
       } catch (error) {
         console.log(error);
       }
+      
     }
+    fetchProducts();
     
-    fecthData();
   }, []);
-  
-  
-
-  // muestra lo que selecciono
-  // function onAdd(contador) {
-  //   console.log(`selecciono ${contador}`);
-  
-  // }
-  // selecciona producto -modo ejem
 
   return (
     <>
         <h2 style={style.subtitulo}> Bienvenidos! {greeting} </h2> 
-        {/* <h2 style={style.estilo}> Bienvenidos! {greeting} </h2> 
-        <ItemCount stock={10} onAdd={onAdd}/>  */}
-        {/* ItemCount a modo de prueba en ItemListContainer luego lo movemos */}
-
-        {/* {producto.map((productos)=>
-          
-            <h2 key={productos.id}>{productos.name}</h2>
-          )
-        } */}
-        <div style={style.lista}>
-
-          {producto.map((productos)=>{
-            return (
-              <ItemList
-                key={productos.id} 
-                name={productos.name} 
-                img={productos.img}
-                precio={productos.precio}
-              />
-            )
-          })}
-        </div>
-
-      
-      
+        <ItemList productos={productos}/>
     </>
   )
 }

@@ -1,6 +1,7 @@
 export const style = {
     container:{
       display: 'flex',
+      // width: 1340,
       height: 60,
       alignItems: 'center',
       justifyContent: 'space-between',

@@ -1,18 +1,14 @@
 import React from 'react'
+import Item from '../Item/Item'
 import { style } from './ItemList.Style'
 
-const ItemList = (props) => {
+const ItemList = ({productos}) => {
   return (
-    <div style={style.list}>
-      <div >
-        <img style={style.imagen} alt={props.name} src={props.img}/>
-        <div>
-          <h3>{props.name}</h3>
-          <p>${props.precio}</p>
-        </div>
-      </div>
-      
-    </div>
+   <div style={style.list}>
+    {productos.map((product) =>
+        <Item key={product.id} product={product}/>
+    )}
+   </div>
   )
 }
 
