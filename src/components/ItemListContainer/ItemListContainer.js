@@ -3,41 +3,35 @@ import { style } from './ItemListContainer.style'
 // import { ItemCount } from '../ItemCount/ItemCount'
 import { ProductData } from '../../data/ProductData'
 import ItemList from './ItemList/ItemList'
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = ({greeting}) => {
 
   const [productos, setProductos] = useState([]);
 
-  // const {id} =useParams();
+  const { categoriaId } =useParams();
   // console.log(id);
+  
 
   useEffect(() => {
     // Promesa
-    const getProductos = () => {
-      return new Promise((resolve, reject)=> {
-        setTimeout(()=> {
-          resolve(ProductData);
-          // console.log(ProductData);
-        }, 2000)
-      })
+    const getProductos = new Promise(resolve => {
+      setTimeout(()=> {
+        resolve(ProductData)
+      }, 1000);
+    });
+    if (categoriaId) {
+      getProductos.then(res => setProductos(res.filter(producto => producto.categoria === categoriaId)));
+    } else {
+      getProductos.then(res => setProductos(res));
+      // console.log(setProductos);
     }
-    // getProductos()
-    //   .then((datos)=> setProductos(datos));
 
-    async function fetchProducts () {
-      try {
-        const datosFetch = await getProductos();
-        setProductos(datosFetch);
-      } catch (error) {
-        console.log(error);
-      }
-      
-    }
-    fetchProducts();
+  }, [categoriaId]);
+
+
     
-  }, []);
 
   return (
     <>

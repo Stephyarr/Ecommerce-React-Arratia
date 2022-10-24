@@ -13,8 +13,8 @@ function App() {
         <NavBar/>
           <Routes>
             <Route path="/" element={<ItemListContainer greeting="Los Productos Mas Buscados"/>} />
-            <Route path='/categoria/:id' element={<ItemListContainer greeting="Los Productos Mas Buscados"/>}/>
-            <Route path='/producto/:id' element={<ItemDetailContainer/>}/>
+            <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting="Los Productos Mas Buscados"/>}/>
+            <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
             <Route path='/cart'element={<Cart/>}/>
 
           </Routes>
@@ -26,5 +26,4 @@ function App() {
 
 export default App;
 
-{/* <ItemListContainer greeting="Los Productos Mas Buscados"/>
-        <ItemDetailContainer/> */}
+

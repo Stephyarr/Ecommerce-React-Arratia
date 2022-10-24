@@ -4,7 +4,7 @@ import { style } from './Item.Style'
 
 const Item = ({product}) => {
 
-  const {id, name, precio, img} = product //destruturando
+  const { name, precio, img} = product //destruturando
 
   return (
     <div>
@@ -12,7 +12,7 @@ const Item = ({product}) => {
         <div>
           <h3>{name}</h3>
           <p>${precio}</p>
-          <Link>Ver Detalle</Link>
+          <Link to={`/detalle/${product.id}`}>Ver Detalle</Link>
         </div>
     </div>
   )

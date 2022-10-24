@@ -13,17 +13,9 @@ const NavBar = () => {
       </Link>
       
       <nav>
-        {/* {
-          ProductData.map((categoria, i)=>{ 
-            
-              <a href={categoria.ruta}>Accesorio</a>
-
-           
-          })
-        } */}
-        <NavLink style={style.navbar} to="/categoria/accesorio">Accesorio</NavLink>
-        <NavLink style={style.navbar} to="/categoria/Buzo Conjunto">Buzo Conjunto</NavLink>
-        <NavLink style={style.navbar} to="/categoria/Buzo Mascota">Buzo Mascota</NavLink>
+        <NavLink style={style.navbar} to="/categoria/accesorios">Accesorio</NavLink>
+        <NavLink style={style.navbar} to="/categoria/buzo humano">Buzo Conjunto</NavLink>
+        <NavLink style={style.navbar} to="/categoria/buzo perro">Buzo Mascota</NavLink>
       </nav>
       <Link to="/cart" style={style.icon}>
        <CartWidget/>
