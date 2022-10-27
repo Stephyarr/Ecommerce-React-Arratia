@@ -7,11 +7,12 @@ const ItemDetail = ({products}) => {
 
   return (
     <div>
-      <img  src={img} alt={name} />
+      <img src={img} alt={name} />
         <div>
           <h3>{name}</h3>
           <p>${precio}</p>
           <p>Stock: {stock}</p>
+          <p>Agregar al carrito</p>
           <Link to='/'> Seguir Comprando </Link>
         </div>
     </div>
