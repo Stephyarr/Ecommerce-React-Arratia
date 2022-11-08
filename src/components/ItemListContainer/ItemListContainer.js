@@ -6,7 +6,7 @@ import ItemList from './ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
 
@@ -35,7 +35,7 @@ const ItemListContainer = ({greeting}) => {
 
   return (
     <>
-        <h2 style={style.subtitulo}> Bienvenidos! {greeting} </h2> 
+        <h2 style={style.subtitulo}> Los Productos Mas Buscados!  </h2> 
         <ItemList productos={productos}/>
     </>
   )
