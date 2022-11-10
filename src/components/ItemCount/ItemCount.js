@@ -17,12 +17,8 @@ export const ItemCount = ({stock, onAdd}) => {
     if (contador > 1 ) {
       setContador(contador - 1)
     }
-    // setContador(contador -1)
   
   }
-  // const reset = () => {
-  //   setContador(1)
-  // }
 
   return (
     <div >
@@ -32,7 +28,6 @@ export const ItemCount = ({stock, onAdd}) => {
         {/* evento handlerClick */}
         <button style={style.btn} onClick={handlerClickAdd}> + </button> 
         <button style={style.btn} onClick={handlerSubstract}> - </button>
-        {/* <button style={style.btn} onClick={reset}>Reset</button> */}
       </div>
       <div>
         <button onClick={()=> onAdd(contador)}>Agregar al carrito</button>

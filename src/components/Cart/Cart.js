@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
-import { ItemCount } from '../ItemCount/ItemCount';
+// import { ItemCount } from '../ItemCount/ItemCount';
 
 const Cart = () => {
   const { cart, totalPrice } = useCartContext();

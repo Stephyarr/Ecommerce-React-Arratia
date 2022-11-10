@@ -4,13 +4,13 @@ import { style } from './Item.Style'
 
 const Item = ({product}) => {
 
-  const { name, precio, img} = product //destruturando
+  const { nombre, precio, imagen} = product //destruturando
 
   return (
     <div>
-        <img style={style.imagen} src={img} alt={name} />
+        <img style={style.imagen} src={imagen} alt={nombre} />
         <div>
-          <h3>{name}</h3>
+          <h3>{nombre}</h3>
           <p>${precio}</p>
           <Link to={`/detalle/${product.id}`}>Ver Detalle</Link>
         </div>
