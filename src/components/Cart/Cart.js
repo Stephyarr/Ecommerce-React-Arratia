@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
+import { CartFinalizar } from './CartFinalizar';
 // import { ItemCount } from '../ItemCount/ItemCount';
 
 const Cart = () => {
-  const { cart, totalPrice } = useCartContext();
+  const { cart } = useCartContext();
 
   if (cart.length === 0) {
     return (
@@ -20,7 +21,7 @@ const Cart = () => {
       {
         cart.map(product => <ItemCart key={product.id} product={product}/>)
       }
-     <p> total: {totalPrice()}</p>
+      <CartFinalizar/>
     </>
   )
 }
