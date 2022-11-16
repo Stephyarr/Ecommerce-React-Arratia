@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
 import { CartFinalizar } from './CartFinalizar';
-// import { ItemCount } from '../ItemCount/ItemCount';
 
 const Cart = () => {
   const { cart } = useCartContext();

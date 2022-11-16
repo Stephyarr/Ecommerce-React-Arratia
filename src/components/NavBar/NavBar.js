@@ -4,7 +4,6 @@ import { style } from './NavBar.style'
 import { Link, NavLink } from 'react-router-dom'
 // import { ProductData } from '../../data/ProductData'
 
-
 const NavBar = () => {
   return (
     <header style={style.container}>
@@ -17,11 +16,11 @@ const NavBar = () => {
         <NavLink style={style.navbar} to="/categoria/buzo humano">Buzo Conjunto</NavLink>
         <NavLink style={style.navbar} to="/categoria/buzo perro">Buzo Mascota</NavLink>
       </nav>
-      <Link to="/cart" style={style.icon}>
+      <Link to="/Cart" style={style.icon}>
        <CartWidget/>
       </Link>
-      
-      
+    
+    
     </header>
   )
 }

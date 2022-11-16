@@ -7,6 +7,7 @@ const CartWidget = () => {
     <div>
       <ShoppingCartIcon/>
       <span>{totalProducts() || ''}</span>
+      
     </div>
   )
 }
