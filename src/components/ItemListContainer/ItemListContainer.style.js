@@ -1,6 +1,5 @@
 export const style = {
-    subtitulo:{
-        textAlign: 'center',
+    loading:{
+        textAling: 'center'
     }
-    
 }

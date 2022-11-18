@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { useCartContext } from '../../context/CartContext'
+import { style } from './ItemDetail.Style'
 
 const ItemDetail = ({item}) => {
 
@@ -17,15 +18,15 @@ const ItemDetail = ({item}) => {
   }
 
   return (
-    <div>
+    <div style={style.conDetail}>
       <img src={imagen} alt={nombre} />
-        <div>
+        <div style={style.cart}>
           <h3>{nombre}</h3>
           <p>${precio}</p>
           <p>Stock: {stock}</p>
 
           <div> { add
-              ? ( <Link to={'/cart'}>Terminar Compra</Link> )
+              ? ( <Link to={'/Cart'}>Terminar Compra</Link> )
               : ( <ItemCount stock={stock} onAdd={onAdd}/> )
                 }
 

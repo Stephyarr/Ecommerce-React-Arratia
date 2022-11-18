@@ -46,11 +46,23 @@ export const Form = () => {
 
   const handlerSubmit = (e) => {
     e.preventDefault()
+    if (
+        buyer.Nombre === '' ||
+        buyer.Email === '' ||
+        buyer.Telefono === '' 
+      ){
+      Swal.fire({
+        icon: 'error',
+        text: `Complete los Datos`,
+      })
+    }
+    else{
     const items = cart.map(product => { return { id: product.id, nombre: product.nombre, precio: product.precio, cantidad: product.quantity }})
     const total = totalPrice()
     const data = { buyer, items, total}
     console.log("data", data)
     createOrder(data)
+    }
   }
 
   const checkout = () => {
@@ -113,7 +125,6 @@ export const Form = () => {
             </div>
         }
 
-        
         
           
     </>

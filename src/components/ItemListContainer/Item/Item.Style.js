@@ -1,6 +1,13 @@
 export const style = {
-    imagen:{
-        width: 250,
+    cards:{
+        margin:10,
+        background: '#40CFFF',
         
+    },
+    imagen:{
+        width: '100%',
+    },
+    subtitle:{
+        textDecoration: 'none'
     }
 }

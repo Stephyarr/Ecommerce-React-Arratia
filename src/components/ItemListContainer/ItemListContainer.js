@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-// import { style } from './ItemListContainer.style'
+import { style } from './ItemListContainer.style'
 // import { ProductData } from '../../data/ProductData'
 import ItemList from './ItemList/ItemList'
 import { useParams } from 'react-router-dom'
@@ -42,7 +42,7 @@ const ItemListContainer = () => {
           loading={loading}
           // cssOverride={override}
           size={40}
-          
+          style={style.loading}
           // aria-label="Loading Spinner"
           // data-testid="loader"
         />
