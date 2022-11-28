@@ -1,11 +1,25 @@
 export const style = {
     conDetail:{
         display: 'flex',
-        height: 400,
-        padding: 20
+        justifyContent: 'center',
+        height: 450,
+        padding: 30,
+        width: 'auto',
+        background: '#40CFFF'
     },
     cart:{
-        display: 'grid'
+        display: 'grid',
+        alignContent: 'space-evenly',
+        padding: 50, 
+       
         
+    },
+    btn:{
+        // height: 5
+        
+        
+    },
+    links:{
+        textDecoration: 'none',
     }
 }

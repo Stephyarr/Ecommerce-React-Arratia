@@ -19,19 +19,19 @@ const ItemDetail = ({item}) => {
 
   return (
     <div style={style.conDetail}>
-      <img src={imagen} alt={nombre} />
+      <img style={style.imag} src={imagen} alt={nombre} />
         <div style={style.cart}>
           <h3>{nombre}</h3>
           <p>${precio}</p>
           <p>Stock: {stock}</p>
 
-          <div> { add
-              ? ( <Link to={'/Cart'}>Terminar Compra</Link> )
+          <div style={style.btn}> { add
+              ? ( <Link to={'/Cart'} style={style.links}>Terminar Compra</Link> )
               : ( <ItemCount stock={stock} onAdd={onAdd}/> )
                 }
 
               <div>
-                <Link to='/'> Seguir Comprando </Link>
+                <Link style={style.links} to='/'> Seguir Comprando </Link>
               </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ export const style = {
     cards:{
         margin:10,
         background: '#40CFFF',
+        width: 'auto',
+        // height: 'auto'
         
     },
     imagen:{

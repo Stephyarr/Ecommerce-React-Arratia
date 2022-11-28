@@ -34,22 +34,22 @@ const ItemListContainer = () => {
   }, [categoria]);
 
   return (
-    <>
+    <div style={style.loading}>
       {
-        loading?
+        loading? 
         <BeatLoader 
           color={'#36d7b7'}
           loading={loading}
           // cssOverride={override}
           size={40}
-          style={style.loading}
+          // style={style.loading}
           // aria-label="Loading Spinner"
           // data-testid="loader"
         />
         :
         <ItemList products={products}/>
       }
-    </>
+    </div>
   )
 }
 

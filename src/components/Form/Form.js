@@ -6,6 +6,7 @@ import { collection, addDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 // import BeatLoader  from "react-spinners/BeatLoader";
 import Swal from 'sweetalert2'
+import { style } from './Form.Style'
  
 
 export const Form = () => {
@@ -83,11 +84,11 @@ export const Form = () => {
         {
           !orderID ?
 
-            <div>
-                <h4>Datos para Finalizar Compra:</h4>
-                <form onSubmit={handlerSubmit}>
-                    <div>
-                        <label>Nombre y Apellido</label>
+            <div style={style.forms}>
+                <h4 style={style.title}>Datos para Finalizar Compra:</h4>
+                <form style={style.subform} onSubmit={handlerSubmit}>
+                    <div style={style.subinfo}>
+                        <label>Nombre y Apellido: </label>
                         <input 
                         type="text" 
                         name="Nombre" 
@@ -95,17 +96,17 @@ export const Form = () => {
                         value={Nombre}
                         onChange={handlerInputChange}/>
                     </div>
-                    <div>
-                        <label>Telefono</label>
+                    <div style={style.subinfo}>
+                        <label>Telefono: </label>
                         <input 
-                        type="number" 
+                        type="text" 
                         name="Telefono"
                         placeholder='Telefono'
                         value={Telefono}
                         onChange={handlerInputChange}/>
                     </div>
-                    <div>
-                        <label>Email</label>
+                    <div style={style.subinfo}>
+                        <label>Email: </label>
                         <input 
                         type="email" 
                         name='Email' 
@@ -113,7 +114,7 @@ export const Form = () => {
                         value={Email}
                         onChange={handlerInputChange}/>
                     </div>
-                    <div>
+                    <div style={style.boton}>
                         <button type="submit">Finalizar</button>
                     </div>
                 </form>
